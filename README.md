@@ -2,6 +2,8 @@
 
 A quick look at .NET 9's new OpenAPI tooling and how it compares to earlier versions of .NET using the `swagger` CLI tool (`Swashbuckle.AspNetCore.Cli`).
 
+> ℹ️ Fork or clone to play with this yourself and explore how it improves/digresses from Swashbuckle CLI
+
 https://github.com/user-attachments/assets/805d961d-1d03-4933-b045-92e3bb85ef4a
 
 Layout:
