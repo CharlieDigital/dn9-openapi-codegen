@@ -2,6 +2,8 @@
 
 A quick look at .NET 9's new OpenAPI tooling and how it compares to earlier versions of .NET using the `swagger` CLI tool (`Swashbuckle.AspNetCore.Cli`).
 
+https://github.com/user-attachments/assets/805d961d-1d03-4933-b045-92e3bb85ef4a
+
 Layout:
 
 ```
@@ -130,7 +132,7 @@ dotnet build --configuration Gen
 
 (Feel free to remove this constraint if you want it to always generate)
 
-We can also make this work for hot reloads:
+We can also make this work for hot reloads (see the video at the top):
 
 ```bash
 # macOS, Linux
