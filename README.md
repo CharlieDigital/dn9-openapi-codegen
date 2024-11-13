@@ -1,5 +1,7 @@
 # .NET 9 OpenAPI + TypeScript Client Generation
 
+A quick look at .NET 9's new OpenAPI tooling and how it compares to earlier versions of .NET using the `swagger` CLI tool (`Swashbuckle.AspNetCore.Cli`).
+
 ## Setup the Project
 
 ```bash
@@ -16,6 +18,8 @@ mkdir vue-spa
 cd vue-spa
 yarn create vite .
 ```
+
+> ⚠️ IMPORTANT NOTE: Like the earlier Swashbuckle tooling, this new tooling starts the server to generate the OpenAPI spec.  This means that your startup code will be invoked.  Be aware of this if your startup code requires "active" components and replace it with a mock/stub that gets loaded/used when you see a flag (see the next section where we add an environment variable called `GEN` for this purpose to indicate that we are in a code generation context).
 
 ## Setup the .NET Web API Project
 
