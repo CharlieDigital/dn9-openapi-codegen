@@ -5,6 +5,10 @@ import type { GetWeatherForecastError, GetWeatherForecastResponse } from './type
 
 export const client = createClient(createConfig());
 
+/**
+ * Only this gets added to the output summary
+ * Only this gets added to the output description
+ */
 export const getWeatherForecast = <ThrowOnError extends boolean = false>(options?: Options<unknown, ThrowOnError>) => {
     return (options?.client ?? client).get<GetWeatherForecastResponse, GetWeatherForecastError, ThrowOnError>({
         ...options,

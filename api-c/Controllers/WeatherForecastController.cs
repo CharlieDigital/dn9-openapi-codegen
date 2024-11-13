@@ -22,6 +22,8 @@ public class WeatherForecastController : ControllerBase
     /// Gets the weather forecast.
     /// </summary>
     /// <returns>The weather forecast for the next 5 days.</returns>
+    [EndpointDescription("Only this gets added to the output description")]
+    [EndpointSummary("Only this gets added to the output summary")]
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {

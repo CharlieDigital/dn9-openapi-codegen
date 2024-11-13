@@ -10,6 +10,8 @@
         "tags": [
           "WeatherForecast"
         ],
+        "summary": "Only this gets added to the output summary",
+        "description": "Only this gets added to the output description",
         "operationId": "GetWeatherForecast",
         "responses": {
           "200": {

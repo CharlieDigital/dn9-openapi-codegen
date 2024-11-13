@@ -2,14 +2,25 @@
 
 A quick look at .NET 9's new OpenAPI tooling and how it compares to earlier versions of .NET using the `swagger` CLI tool (`Swashbuckle.AspNetCore.Cli`).
 
+Layout:
+
+```
+/api-c              Controller API example
+/api                Minimal API example
+/openapi-spec-c     Controller API OpenAPI spec output target
+/openapi-spec       Minimal API OpenAPI spec output target
+/react-spa          React SPA generating a TypeScript client using the /api-c output
+/vue-spa            Vue SPA generating a TypeScript client using the /api output
+```
+
 ## Setup the Project
 
 ```bash
 # Create the workspace
-mkdir dn-openapi-spa
+mkdir dn9-openapi-codgen
 
 # Create the .NET 9 web app
-dn-openapi-spa
+dn9-openapi-codgen
 dotnet new webapi -minimal -f net9.0
 
 # Create the SPA (Vue) or your framework of choice
@@ -152,7 +163,7 @@ This example generates a client for the `react-spa` app.
 
 Big downside from earlier Swagger tooling is that there does not appear to be a way to automatically incorporate the XML document comments into the output schema.
 
-This has been replaced by [metadata attributes](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/openapi/include-metadata?view=aspnetcore-9.0&tabs=minimal-apis).
+This is accomplished by [metadata attributes](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/openapi/include-metadata?view=aspnetcore-9.0&tabs=minimal-apis).
 
 (Boooooo!)
 
