@@ -21,7 +21,7 @@ Layout:
 
 ```bash
 # Create the workspace
-mkdir dn9-openapi-codgen
+mkdir dn9-openapi-codegen
 
 # Create the .NET 9 web app
 dn9-openapi-codgen
